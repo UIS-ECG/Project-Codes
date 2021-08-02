@@ -98,6 +98,7 @@ dataframe = pd.DataFrame(data, columns = ['Mean RR', 'SDNN', 'RMSSD', 'TINN', 'V
 X_test=(dataframe[["Mean RR","SDNN","RMSSD","TINN","VLF","LF","HF","LF/HF"]])
 print(X_test)
 nueva_predic=modelo_nuevo.predict(X_test)
+X_test.to_csv('caracteristicas.csv', header=False, index=False)
 
 print('\n')
 
